@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const interactions = require('../routes/interactions');
+const profile = require('../routes/profile');
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use('/interactions', interactions);
+app.use('/profile', profile);
 
 app.use((err, req, res, next) => {
     res.json(err);
